@@ -1,0 +1,7 @@
+{
+  "name": "Gemini Walkie-Talkie",
+  "description": "A rugged, AI-powered walkie-talkie app that uses the Gemini 2.5 Live API for real-time voice conversations with a futuristic push-to-talk interface.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
