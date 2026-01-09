@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from 'https://esm.sh/react@18.2.0';
 
 interface AudioVisualizerProps {
   active: boolean;
@@ -13,7 +13,7 @@ const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ active }) => {
           key={i}
           className={`w-1 bg-green-500 transition-all duration-150 rounded-full`}
           style={{
-            height: active ? `${Math.random() * 100}%` : '10%',
+            height: active ? `${Math.floor(Math.random() * 100)}%` : '10%',
             opacity: active ? (i % 2 === 0 ? 0.8 : 0.4) : 0.1,
             transitionDelay: `${i * 20}ms`
           }}

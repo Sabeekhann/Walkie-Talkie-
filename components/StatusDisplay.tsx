@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { ConnectionStatus } from '../types';
+import React from 'https://esm.sh/react@18.2.0';
+import { ConnectionStatus } from '../types.ts';
 
 interface StatusDisplayProps {
   status: ConnectionStatus;
@@ -14,19 +14,19 @@ const StatusDisplay: React.FC<StatusDisplayProps> = ({ status }) => {
       case ConnectionStatus.INITIALIZING:
         return { text: 'BOOTING...', color: 'text-yellow-500', blink: true };
       case ConnectionStatus.READY:
-        return { text: 'READY / STANDBY', color: 'text-green-800', blink: false };
+        return { text: 'STANDBY', color: 'text-green-800', blink: false };
       case ConnectionStatus.CONNECTING:
-        return { text: 'SEARCHING PEER...', color: 'text-yellow-400', blink: true };
+        return { text: 'LINKING...', color: 'text-yellow-400', blink: true };
       case ConnectionStatus.CONNECTED:
-        return { text: 'LINK SECURED', color: 'text-green-500', blink: false };
+        return { text: 'SECURE', color: 'text-green-500', blink: false };
       case ConnectionStatus.TRANSMITTING:
-        return { text: 'TX - BROADCAST', color: 'text-red-500', blink: true };
+        return { text: 'TX', color: 'text-red-500', blink: true };
       case ConnectionStatus.RECEIVING:
-        return { text: 'RX - INCOMING', color: 'text-blue-500', blink: true };
+        return { text: 'RX', color: 'text-blue-500', blink: true };
       case ConnectionStatus.ERROR:
-        return { text: 'HARDWARE FAILURE', color: 'text-red-700', blink: false };
+        return { text: 'FAIL', color: 'text-red-700', blink: false };
       default:
-        return { text: 'UNKNOWN', color: 'text-stone-600', blink: false };
+        return { text: 'OFF', color: 'text-stone-600', blink: false };
     }
   };
 
